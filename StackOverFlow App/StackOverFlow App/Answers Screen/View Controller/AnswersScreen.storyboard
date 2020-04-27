@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j49-61-6s1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Answers View Controller-->
+        <scene sceneID="lSq-3v-W5d">
+            <objects>
+                <viewController id="j49-61-6s1" customClass="AnswersViewController" customModule="StackOverFlow_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xc1-38-8Oj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="s3q-pJ-VP4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnswersCellIdentifier" id="nYK-gf-2Nc" customClass="AnswersTableViewCell" customModule="StackOverFlow_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nYK-gf-2Nc" id="PZ7-PK-WlV">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="j49-61-6s1" id="u0Q-Qb-AJh"/>
+                                    <outlet property="delegate" destination="j49-61-6s1" id="Tcs-QE-Rcu"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="s3q-pJ-VP4" firstAttribute="leading" secondItem="xc1-38-8Oj" secondAttribute="leading" id="38u-Oz-x5E"/>
+                            <constraint firstItem="s3q-pJ-VP4" firstAttribute="top" secondItem="jew-A2-RB6" secondAttribute="top" id="9We-VJ-Z1Z"/>
+                            <constraint firstAttribute="trailing" secondItem="s3q-pJ-VP4" secondAttribute="trailing" id="EZa-ea-lns"/>
+                            <constraint firstItem="jew-A2-RB6" firstAttribute="bottom" secondItem="s3q-pJ-VP4" secondAttribute="bottom" id="pRg-AW-Tug"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jew-A2-RB6"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="screenTitle" value="More Info"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="tableView" destination="s3q-pJ-VP4" id="12f-Ye-swL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g8p-iB-nOV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48" y="90"/>
+        </scene>
+    </scenes>
+</document>
